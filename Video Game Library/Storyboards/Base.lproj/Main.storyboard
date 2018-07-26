@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,11 +14,76 @@
         <!--Game Library-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Video_Game_Library" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="GameViewController" customModule="Video_Game_Library" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YvB-z9-T1j">
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GameTableViewCell" rowHeight="90" id="lup-xq-rIN" customClass="GameTableViewCell" customModule="Video_Game_Library" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lup-xq-rIN" id="qaG-H9-ABL">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ko6-WQ-sap">
+                                                    <rect key="frame" x="15" y="11" width="151" height="30"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="25"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVt-Vc-kuB">
+                                                    <rect key="frame" x="15" y="55.5" width="60.5" height="23.5"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Availability" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPe-aH-KqO">
+                                                    <rect key="frame" x="240" y="29.5" width="120" height="30"/>
+                                                    <color key="backgroundColor" red="0.076096530319999994" green="0.97553128" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="120" id="RZb-qu-8xX"/>
+                                                        <constraint firstAttribute="height" constant="30" id="kFP-e3-6yR"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="QVt-Vc-kuB" firstAttribute="bottom" secondItem="qaG-H9-ABL" secondAttribute="bottomMargin" id="1kp-ls-frD"/>
+                                                <constraint firstItem="ko6-WQ-sap" firstAttribute="leading" secondItem="qaG-H9-ABL" secondAttribute="leadingMargin" id="KEa-NP-ZPs"/>
+                                                <constraint firstItem="ko6-WQ-sap" firstAttribute="top" secondItem="qaG-H9-ABL" secondAttribute="topMargin" id="TBm-LT-3zS"/>
+                                                <constraint firstItem="QVt-Vc-kuB" firstAttribute="leading" secondItem="qaG-H9-ABL" secondAttribute="leadingMargin" id="WMg-ch-BCy"/>
+                                                <constraint firstItem="QVt-Vc-kuB" firstAttribute="top" secondItem="ko6-WQ-sap" secondAttribute="bottom" constant="15" id="Zyz-X1-Z3G"/>
+                                                <constraint firstItem="sPe-aH-KqO" firstAttribute="centerY" secondItem="qaG-H9-ABL" secondAttribute="centerY" id="kYw-Si-EuJ"/>
+                                                <constraint firstItem="sPe-aH-KqO" firstAttribute="trailing" secondItem="qaG-H9-ABL" secondAttribute="trailingMargin" id="nrS-Vv-emu"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="availabilityLabel" destination="sPe-aH-KqO" id="DAM-we-gBK"/>
+                                            <outlet property="gameGenreLabel" destination="QVt-Vc-kuB" id="r5R-By-ZGJ"/>
+                                            <outlet property="gameTitleLabel" destination="ko6-WQ-sap" id="h1h-ZK-4gj"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="k5L-Vg-yaH"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="xOw-m5-l0b"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YvB-z9-T1j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OTj-Sh-zVK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YvB-z9-T1j" secondAttribute="trailing" id="SQd-Zi-xkK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YvB-z9-T1j" secondAttribute="bottom" id="dHC-BV-h2O"/>
+                            <constraint firstItem="YvB-z9-T1j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mCd-bb-TEd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Game Library" id="7b6-ca-GrX"/>
