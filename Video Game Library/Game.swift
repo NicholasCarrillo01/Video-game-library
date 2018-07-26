@@ -28,4 +28,6 @@ class Game {
         self.title = title
         self.genre = genre
     }
+    
+
 }
