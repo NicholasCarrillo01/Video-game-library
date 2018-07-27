@@ -86,11 +86,70 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Game Library" id="7b6-ca-GrX"/>
+                    <navigationItem key="navigationItem" title="Game Library" id="7b6-ca-GrX">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="woI-nN-Hk1">
+                            <connections>
+                                <segue destination="G02-3m-j0g" kind="show" id="FTa-GJ-Cma"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="132.68365817091455"/>
+            <point key="canvasLocation" x="1009" y="133"/>
+        </scene>
+        <!--Add New Game-->
+        <scene sceneID="wZJ-bR-B25">
+            <objects>
+                <viewController id="G02-3m-j0g" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0fa-U6-NJ3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Bs-mN-trh">
+                                <rect key="frame" x="16" y="136" width="82.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title of Game" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ECC-iQ-Gku">
+                                <rect key="frame" x="50" y="165" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRL-Uo-FzJ">
+                                <rect key="frame" x="16" y="211" width="46.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XGy-nI-7on">
+                                <rect key="frame" x="0.0" y="240" width="375" height="216"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JRL-Uo-FzJ" firstAttribute="leading" secondItem="FCi-CM-h7t" secondAttribute="leading" constant="16" id="Fjn-5v-9rT"/>
+                            <constraint firstItem="ECC-iQ-Gku" firstAttribute="top" secondItem="8Bs-mN-trh" secondAttribute="bottom" constant="8" id="Mkx-HB-eSl"/>
+                            <constraint firstItem="XGy-nI-7on" firstAttribute="leading" secondItem="FCi-CM-h7t" secondAttribute="leading" id="U7L-La-ge5"/>
+                            <constraint firstItem="FCi-CM-h7t" firstAttribute="trailing" secondItem="ECC-iQ-Gku" secondAttribute="trailing" constant="50" id="UX8-8c-Ici"/>
+                            <constraint firstItem="8Bs-mN-trh" firstAttribute="top" secondItem="FCi-CM-h7t" secondAttribute="top" constant="20" id="WLz-Oh-6lG"/>
+                            <constraint firstItem="ECC-iQ-Gku" firstAttribute="leading" secondItem="FCi-CM-h7t" secondAttribute="leading" constant="50" id="foF-lv-L5f"/>
+                            <constraint firstItem="8Bs-mN-trh" firstAttribute="leading" secondItem="FCi-CM-h7t" secondAttribute="leading" constant="16" id="gBr-SU-ATB"/>
+                            <constraint firstItem="XGy-nI-7on" firstAttribute="trailing" secondItem="FCi-CM-h7t" secondAttribute="trailing" id="ol2-QU-SdU"/>
+                            <constraint firstItem="XGy-nI-7on" firstAttribute="top" secondItem="JRL-Uo-FzJ" secondAttribute="bottom" constant="8" id="rS9-CI-jUS"/>
+                            <constraint firstItem="JRL-Uo-FzJ" firstAttribute="top" secondItem="ECC-iQ-Gku" secondAttribute="bottom" constant="16" id="vHi-Ng-Hrd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FCi-CM-h7t"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add New Game" id="kVV-bc-314">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Bxq-mu-Rp3"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pzk-hD-tQ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1776.8" y="132.68365817091455"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iLe-31-a5D">

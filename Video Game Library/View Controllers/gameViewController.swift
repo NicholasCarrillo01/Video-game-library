@@ -37,7 +37,16 @@ class GameViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         tableView.deleteRows(at: [indexPath], with: .fade)
         }
-        return [deleteAction]
+        let game = GameManager.sharedInstance.getGame(at: indexPath.row)
+        let title = game.availablility ? "Check Out" : "Check In"
+        
+        let checkOutOrInAction = UITableViewRowAction(style: .normal, title: title) { (_ , _) in
+            GameManager.sharedInstance.checkGameInOrOut(at: indexPath.row)
+            tableView.reloadData()
+        }
+        
+        
+        return [deleteAction, checkOutOrInAction]
     }
     
     override func viewDidLoad() {
